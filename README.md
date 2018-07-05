@@ -1,3 +1,7 @@
+[![Latest Stable Version](https://poser.pugx.org/nemo64/canonical-url/v/stable)](https://packagist.org/packages/nemo64/canonical-url)
+[![Total Downloads](https://poser.pugx.org/nemo64/canonical-url/downloads)](https://packagist.org/packages/nemo64/canonical-url)
+[![License](https://poser.pugx.org/nemo64/canonical-url/license)](https://packagist.org/packages/nemo64/canonical-url)
+
 # EXT:canonical_url
 
 This extension adds some canonical url features to your page.
