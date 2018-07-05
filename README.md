@@ -22,13 +22,42 @@ This extensions adds a TypoScript for you to use. Just add the fittingly named `
 
 You can use the new [getText] funktion `canonical_parameters` to get the query string to the current page. This is different to addQueryString in that it only includes parameters that are relevant for the cache and therefor validated using the [cHash Mechanismus].
 
+Here an example on how to create a link to the current page:
+
 ```
-lib.link = TEXT
-lib.link.value = Current page
-lib.link.typolink {
-    parameter.data = page:uid
-    additionalParams.data = canonical_parameters
-    useCacheHash = 1
+lib.currentPageLink = TEXT
+lib.currentPageLink {
+    value = Current page
+    
+    typolink {
+        parameter.data = page:uid
+        additionalParams.data = canonical_parameters
+        useCacheHash = 1
+    }
+}
+```
+
+And here an example on how to create a breadcrumb where the last entry is the current page:
+
+```
+lib.breadcrumb = HMENU
+lib.breadcrumb {
+    wrap = <nav aria-label="breadcrumb"><ol class="breadcrumb">|</ol></nav>
+    special = rootline
+    special.range = 1|-1
+    includeNotInMenu = 1
+    
+    1 = TMENU
+    1 {
+        NO = 1
+        NO.wrapItemAndSub = <li class="breadcrumb-item">|</li>
+        
+        CUR < .NO
+        CUR.additionalParams.data = canonical_parameters
+        CUR.wrapItemAndSub = <li class="breadcrumb-item active" aria-current="page">|</li>
+        CUR.stdWrap.data = TSFE:altPageTitle // page:nav_title // page:title
+        CUR.doNotLinkIt = 1
+    }
 }
 ```
 
