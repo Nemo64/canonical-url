@@ -2,9 +2,9 @@
 
 This extension adds some canonical url features to your page.
 
-## base features
+## Main features
 
-### `<link rel="canonical">`
+### Static TypoScript Template for `<link rel="canonical">`
 
 This extensions adds a TypoScript for you to use. Just add the fittingly named `<link rel="canonical"> (canonical_url)` static include to your typoscript template and you are all set.
 
