@@ -18,9 +18,7 @@ This extension only focuses on how to handle the current page url and you can in
 
 This extensions adds a TypoScript for you to use. Just add the fittingly named `<link rel="canonical"> (canonical_url)` static include to your typoscript template and you are all set.
 
-## TypoScript extensions
-
-### `data = canonical_parameters`
+### TypoScript extension `data = canonical_parameters`
 
 You can use the new [getText] funktion `canonical_parameters` to get the query string to the current page. This is different to addQueryString in that it only includes parameters that are relevant for the cache and therefor validated using the [cHash Mechanismus].
 
