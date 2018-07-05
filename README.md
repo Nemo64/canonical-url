@@ -18,10 +18,6 @@ This extension only focuses on how to handle the current page url and you can in
 
 This extensions adds a TypoScript for you to use. Just add the fittingly named `<link rel="canonical"> (canonical_url)` static include to your typoscript template and you are all set.
 
-### Static TypoScript template for `<link rel="alternate" hreflang="...">` (planned)
-
-This TypoScript will add `hreflang` relations to your page. You only need this if your page has multiple languages. To use this you'll need to configure what languages your page uses. I'm not sure yet how to do that but I have Ideas.
-
 ## TypoScript extensions
 
 ### `data = canonical_parameters`
