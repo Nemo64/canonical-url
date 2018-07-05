@@ -15,15 +15,12 @@ This extensions adds a TypoScript for you to use. Just add the fittingly named `
 You can use the new [getText] funktion `canonical_parameters` to get the query string to the current page. This is different to addQueryString in that it only includes parameters that are relevant for the cache and therefor validated using the [cHash Mechanismus].
 
 ```
-page.headerData.1530780685 = TEXT
-page.headerData.1530780685 {
-    wrap = <link rel="canonical" href="|">
-    typolink.parameter.data = page:uid
-    typolink.returnLast = url
-    typolink.forceAbsoluteUrl = 1
-
-    typolink.additionalParams.data = canonical_parameters
-    typolink.useCacheHash = 1
+lib.link = TEXT
+lib.link.value = Current page
+lib.link.typolink {
+    parameter.data = page:uid
+    additionalParams.data = canonical_parameters
+    useCacheHash = 1
 }
 ```
 
