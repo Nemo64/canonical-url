@@ -2,6 +2,8 @@
 
 This extension adds some canonical url features to your page.
 
+This extension is based on my [Blog Post] (in german) in which you can read more about the topic of canonical urls in typo3 and why they aren't as simple as they should be.
+
 ## Main features
 
 ### Static TypoScript Template for `<link rel="canonical">`
@@ -24,5 +26,6 @@ lib.link.typolink {
 }
 ```
 
+[Blog Post]: https://www.marco.zone/typo3-canonical-url
 [getText]: https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/DataTypes/Gettext/
 [cHash Mechanismus]: https://www.typo3lexikon.de/typo3-tutorials/core/cache/chash-was-ist-das.html
