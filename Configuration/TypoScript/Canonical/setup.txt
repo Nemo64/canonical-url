@@ -1,0 +1,10 @@
+page.headerData.1530780685 = TEXT
+page.headerData.1530780685 {
+    wrap = <link rel="canonical" href="|">
+    typolink.parameter.data = page:uid
+    typolink.returnLast = url
+    typolink.forceAbsoluteUrl = 1
+
+    typolink.additionalParams.data = canonical_parameters
+    typolink.useCacheHash = 1
+}
