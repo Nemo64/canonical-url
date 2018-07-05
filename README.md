@@ -4,6 +4,10 @@ This extension adds some canonical url features to your page.
 
 This extension is based on my [Blog Post] (in german) in which you can read more about the topic of canonical urls in typo3 and why they aren't as simple as they should be.
 
+There are also a lot of extension that already bring canonical support with varying implementation quality but in those the canonical url is just one of many features.
+
+This extension only focuses on how to handle the current page url and you can install this extension and just use the typoscript extensions without any page modifications if you want to have full control.
+
 ## Main features
 
 ### Static TypoScript Template for `<link rel="canonical">`
