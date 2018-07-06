@@ -63,6 +63,28 @@ lib.breadcrumb {
 }
 ```
 
+And here an example on how to implement hreflang:
+
+```php
+page.headerData {
+    99 = TEXT
+    99.wrap = <link rel="alternate" hreflang="x-default" href="|">
+    99.typolink {
+        parameter.data = page:uid
+        additionalParams.data = canonical_parameters
+        additionalParams.wrap = |&L=0
+    }
+    
+    100 < .99
+    100.wrap = <link rel="alternate" hreflang="en" href="|">
+    100.typolink.additionalParams.wrap = |&L=0
+    
+    101 < .99
+    101.wrap = <link rel="alternate" hreflang="de" href="|">
+    101.typolink.additionalParams.wrap = |&L=1
+}
+```
+
 [Blog Post]: https://www.marco.zone/typo3-canonical-url
 [getText]: https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/DataTypes/Gettext/
 [cHash Mechanismus]: https://www.typo3lexikon.de/typo3-tutorials/core/cache/chash-was-ist-das.html
