@@ -12,6 +12,8 @@ There are also a lot of extension that already bring canonical support with vary
 
 This extension only focuses on how to handle the current page url and you can install this extension and just use the typoscript extensions without any page modifications if you want to have full control.
 
+I encourage you to use this extension as a dependency in your extension if you need canonical_parameters. This extension won't do anything except for providing the canonical_parameters getText function (and later maybe more ways like view helpers). The integrator will always have to include the static typoscript for this extension to have any effect. It is therefor a save dependency.
+
 ## Main features
 
 ### Static TypoScript template for `<link rel="canonical">`
