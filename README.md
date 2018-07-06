@@ -26,7 +26,7 @@ You can use the new [getText] funktion `canonical_parameters` to get the query s
 
 Here an example on how to create a link to the current page:
 
-```
+```php
 lib.currentPageLink = TEXT
 lib.currentPageLink {
     value = Current page
@@ -41,7 +41,7 @@ lib.currentPageLink {
 
 And here an example on how to create a breadcrumb where the last entry is the current page:
 
-```
+```php
 lib.breadcrumb = HMENU
 lib.breadcrumb {
     wrap = <nav aria-label="breadcrumb"><ol class="breadcrumb">|</ol></nav>
