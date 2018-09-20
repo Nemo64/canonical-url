@@ -5,7 +5,6 @@ namespace Nemo64\CanonicalUrl\Hook;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectGetDataHookInterface;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class CanonicalParametersGetDataHook implements ContentObjectGetDataHookInterface
 {
@@ -19,7 +18,7 @@ class CanonicalParametersGetDataHook implements ContentObjectGetDataHookInterfac
      *
      * @return string Get data result
      */
-    public function getDataExtension($getDataString, array $fields, $sectionValue, $returnValue, ContentObjectRenderer &$parentObject)
+    public function getDataExtension($getDataString, $fields, $sectionValue, $returnValue, &$parentObject)
     {
         if ($getDataString !== 'canonical_parameters') {
             return $returnValue;
