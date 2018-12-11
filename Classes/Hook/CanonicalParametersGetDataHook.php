@@ -18,7 +18,7 @@ class CanonicalParametersGetDataHook implements ContentObjectGetDataHookInterfac
      *
      * @return string Get data result
      */
-    public function getDataExtension($getDataString, $fields, $sectionValue, $returnValue, &$parentObject)
+    public function getDataExtension($getDataString, array $fields, $sectionValue, $returnValue, \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer &$parentObject)
     {
         if ($getDataString !== 'canonical_parameters') {
             return $returnValue;
