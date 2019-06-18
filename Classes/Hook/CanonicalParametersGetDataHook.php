@@ -9,7 +9,6 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectGetDataHookInterface;
 class CanonicalParametersGetDataHook implements ContentObjectGetDataHookInterface
 {
     /**
-     *
      * @param string $getDataString Full content of getData-request e.g. "TSFE:id // field:title // field:uid
      * @param array $fields Current field-array
      * @param string $sectionValue Currently examined section value of the getData request e.g. "field:title
@@ -18,7 +17,7 @@ class CanonicalParametersGetDataHook implements ContentObjectGetDataHookInterfac
      *
      * @return string Get data result
      */
-    public function getDataExtension($getDataString, array $fields, $sectionValue, $returnValue, \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer &$parentObject)
+    public function getDataExtension($getDataString, $fields, $sectionValue, $returnValue, &$parentObject)
     {
         if ($getDataString !== 'canonical_parameters') {
             return $returnValue;
